@@ -64,7 +64,7 @@ class Converter:
         self.help_button.grid(row=0, column=1)
 
     def temp_convert(self, low):
-        print(low)
+        # print(low)
 
         error = '#ffafaf'  # pale pink background when entry box has errors
 
@@ -110,7 +110,7 @@ class Converter:
                 self.history_button.config(state=NORMAL)
 
         except ValueError:
-            self.converted_label.configure(text="Enter a number!!", fg='red')
+            self.converted_label.configure(text="Please enter a number.", fg='red')
             self.to_convert_entry.configure(bg=error)
 
     def round_it(self, to_round):
@@ -217,7 +217,7 @@ class History:
 class Export:
     def __init__(self, partner, calc_history):
 
-        print(calc_history)
+        # print(calc_history)
 
         background = "#a9ef99"      # pale green
 
@@ -282,7 +282,7 @@ class Export:
         has_error = 'no'
 
         filename = self.filename_entry.get()
-        print(filename)
+        # print(filename)
 
         for letter in filename:
             if re.match(valid_char, letter):
